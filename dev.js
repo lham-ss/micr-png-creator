@@ -1,3 +1,5 @@
+// lham@ss.io
+
 const express = require('express');
 const { createCanvas, registerFont } = require('canvas');
 const fs = require('fs');
