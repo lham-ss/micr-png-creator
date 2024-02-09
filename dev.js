@@ -20,7 +20,7 @@ const main = (checkNumber, routingNumber, accountNumber) => {
 
     // Use the E13B font
     ctx.font = '48pt "MICR E13B"';
-    ctx.fillText('C0008675309C A121000999   49426000000C', 10, 600, 4000);
+    ctx.fillText('C0008675309C A1210012345   49426000000C', 10, 600, 4000);
 
     // Create the png file
     const buffer = canvas.toBuffer('image/png');
