@@ -18,11 +18,10 @@ const main = (checkNumber, routingNumber, accountNumber) => {
     const canvas = createCanvas(4000, 1000);
     const ctx = canvas.getContext('2d');
 
-    // Use the E13B font
     ctx.font = '48pt "MICR E13B"';
-    ctx.fillText('C0008675309C A1210012345   49426000000C', 10, 600, 4000);
 
-    // Create the png file
+    ctx.fillText(`C${checkNumber}C A${routingNumber}   ${accountNumber}C`, 10, 600, 4000);
+
     const buffer = canvas.toBuffer('image/png');
 
     fs.writeFileSync('./results.png', buffer);
@@ -31,4 +30,4 @@ const main = (checkNumber, routingNumber, accountNumber) => {
 
 };
 
-main('185940854', '454545', '45065');
+main('8675309', '12100002345', '49426000000');
