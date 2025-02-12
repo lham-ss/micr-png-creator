@@ -7,9 +7,9 @@ const app = express();
 const port = process.env.PORT || 3030;
 
 const defaultRoutingNumber = '121000248';    // use this default if no routing number is provided
-const defaultAccountNumber = '54942657528';  // use this default if no account number is provided
+const defaultAccountNumber = '4942600000';  // use this default if no account number is provided
 
-app.get('/micr-gen', (req, res) => {
+app.get('/api/rcp-solutions/micr-gen', (req, res) => {
     let { checkNumber, routingNumber = defaultRoutingNumber, accountNumber = defaultAccountNumber } = req.query;
 
     if (!checkNumber || !routingNumber || !accountNumber) {

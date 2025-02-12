@@ -18,6 +18,8 @@ const generateMICRLinePng = (checkNumber, routingNumber, accountNumber) => {
 
     ctx.font = fontName
 
+    checkNumber = checkNumber.toString().padStart(8, '0');
+
     ctx.fillText(`C${checkNumber}C A${routingNumber}A   ${accountNumber}C`, 10, 25, 700);
 
     return canvas.toBuffer('image/png');
