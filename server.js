@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path')
 const pngImageFactory = require('./micr-to-png'); // gonna make you sweat!
-
+const fs =  require('fs');
 const app = express();
 
 const port = process.env.PORT || 3031;
