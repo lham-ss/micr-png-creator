@@ -30,6 +30,10 @@ app.get('/api/rcp-solutions/micr-gen', (req, res) => {
 app.get('/api/rcp-solutions/logo', (req, res) => {
     const imagePath = path.join(__dirname, 'images', 'company_watermark.png');
 
+    
+    res.sendFile(imagePath);
+    
+    /*
     fs.readFile(imagePath, (err, data) => {
         if (err) {
           console.error(err);
@@ -39,11 +43,14 @@ app.get('/api/rcp-solutions/logo', (req, res) => {
         res.writeHead(200, { 'Content-Type': 'image/png' });
         res.end(data);
       });
+    */
 });
 
 app.get('/api/rcp-solutions/sig', (req, res) => {
     const imagePath = path.join(__dirname, 'images', 'new_check_signature.png');
 
+    res.sendFile(imagePath);
+    /*
     fs.readFile(imagePath, (err, data) => {
         if (err) {
           console.error(err);
@@ -53,6 +60,7 @@ app.get('/api/rcp-solutions/sig', (req, res) => {
         res.writeHead(200, { 'Content-Type': 'image/png' });
         res.end(data);
       });
+      */
 });
 
 
