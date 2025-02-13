@@ -41,7 +41,7 @@ app.get('/api/rcp-solutions/logo', (req, res) => {
       });
 });
 
-app.get('/api/rcp-solutions/logo', (req, res) => {
+app.get('/api/rcp-solutions/sig', (req, res) => {
     const imagePath = this.path.join(__dirname, 'images', 'new_check_signature.png');
 
     fs.readFile(imagePath, (err, data) => {
